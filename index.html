@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Shubham 🎂</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f1020;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Floating hearts */
+        .heart {
+            position: fixed;
+            bottom: -20px;
+            font-size: 20px;
+            animation: floatUp 7s linear infinite;
+            opacity: 0.7;
+            pointer-events: none;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 30px;
+            background:
+                radial-gradient(circle at top, #45315f, transparent 45%),
+                linear-gradient(135deg, #111225, #24152d);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .small-text {
+            font-size: 18px;
+            letter-spacing: 3px;
+            color: #e8c7ff;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: clamp(55px, 12vw, 110px);
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, #ffffff, #ffb6e6, #d8b4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #d8d8df;
+            line-height: 1.7;
+            margin-bottom: 35px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 50px;
+            background: white;
+            color: #24152d;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            transform: scale(1.08);
+            box-shadow: 0 10px 40px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 25px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            color: #bdbdc8;
+            max-width: 650px;
+            margin: 0 auto 50px;
+            line-height: 1.7;
+        }
+
+        /* Message */
+        .message-box {
+            max-width: 750px;
+            margin: auto;
+            padding: 40px;
+            border-radius: 25px;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+        }
+
+        .message-box p {
+            color: #dddde5;
+            font-size: 19px;
+            line-height: 1.9;
+        }
+
+        /* Cards */
+        .cards {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            padding: 35px 25px;
+            border-radius: 22px;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background: rgba(255,255,255,0.1);
+        }
+
+        .emoji {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #bbbcc7;
+            line-height: 1.6;
+        }
+
+        /* Photos */
+        .photos {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .photo-placeholder {
+            height: 260px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #30213b, #1c2038);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #aaa;
+            border: 1px dashed #666;
+        }
+
+        /* Final */
+        .final {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background:
+                radial-gradient(circle, #4b2754, transparent 50%),
+                #111225;
+        }
+
+        .final h2 {
+            font-size: clamp(40px, 8vw, 80px);
+            margin-bottom: 25px;
+        }
+
+        .final p {
+            color: #ccc;
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+        footer {
+            padding: 25px;
+            text-align: center;
+            color: #777;
+            background: #090a14;
+        }
+
+        @media(max-width:600px) {
+            section {
+                padding: 75px 20px;
+            }
+
+            .message-box {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Floating hearts -->
+    <div class="heart" style="left:10%; animation-delay:0s;">💜</div>
+    <div class="heart" style="left:25%; animation-delay:2s;">✨</div>
+    <div class="heart" style="left:45%; animation-delay:4s;">❤️</div>
+    <div class="heart" style="left:65%; animation-delay:1s;">🌸</div>
+    <div class="heart" style="left:85%; animation-delay:3s;">💫</div>
+
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="small-text">
+                A LITTLE SOMETHING FOR YOU ✨
+            </div>
+
+            <h1>SHUBHAM</h1>
+
+            <p>
+                Because some people deserve more than just a
+                simple "Happy Birthday." 🎂
+            </p>
+
+            <a href="#message" class="button">
+                Open Your Surprise ✨
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- MESSAGE -->
+    <section id="message">
+
+        <h2 class="section-title">
+            Okay... Let's Talk About You 😌
+        </h2>
+
+        <p class="section-subtitle">
+            Not exactly sure what category you fall into...
+            friend? mentor? special person?
+            Let's just say you're someone worth celebrating. 😂
+        </p>
+
+        <div class="message-box">
+
+            <p>
+                Dear Shubham,
+                <br><br>
+
+                Some people enter your life with a proper
+                introduction, a defined relationship and a label.
+                And then there are people who somehow become
+                important without any of that.
+                <br><br>
+
+                You are probably somewhere in that second category. 😄
+                <br><br>
+
+                So today, instead of writing some extremely
+                formal birthday message, I thought...
+                why not make an entire website? 😂
+                <br><br>
+
+                Wishing you an amazing birthday and an even more
+                amazing year ahead. May you get everything you're
+                working for, plenty of reasons to smile, and
+                obviously... a little less stress. 😌
+                <br><br>
+
+                Stay the same amazing person you are.
+                And yes, you're allowed to feel special today.
+                Just don't let it get to your head. 😂
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- WHY SPECIAL -->
+    <section>
+
+        <h2 class="section-title">
+            A Few Things About You ✨
+        </h2>
+
+        <p class="section-subtitle">
+            Some observations that simply cannot be ignored.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="emoji">😎</div>
+                <h3>The Vibe</h3>
+                <p>
+                    Somehow you manage to have that
+                    "I've got this" energy even when
+                    absolutely nothing makes sense.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="emoji">😂</div>
+                <h3>Certified Legend</h3>
+                <p>
+                    There are people who are memorable...
+                    and then there are people who somehow
+                    become stories.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="emoji">✨</div>
+                <h3>Good Human</h3>
+                <p>
+                    Behind all the jokes and chaos,
+                    you're genuinely someone who deserves
+                    respect and appreciation.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="emoji">🎯</div>
+                <h3>Keep Going</h3>
+                <p>
+                    Whatever you're working towards,
+                    I hope this year takes you a few
+                    steps closer to it.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PHOTOS -->
+    <section>
+
+        <h2 class="section-title">
+            Memories 📸
+        </h2>
+
+        <p class="section-subtitle">
+            This section is waiting for some legendary pictures.
+            We'll add them here later. 👀
+        </p>
+
+        <div class="photos">
+
+            <div class="photo-placeholder">
+                📸 Photo 1
+            </div>
+
+            <div class="photo-placeholder">
+                📸 Photo 2
+            </div>
+
+            <div class="photo-placeholder">
+                📸 Photo 3
+            </div>
+
+            <div class="photo-placeholder">
+                📸 Photo 4
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FINAL -->
+    <section class="final">
+
+        <div>
+
+            <h2>
+                Happy Birthday, Shubham! 🎂
+            </h2>
+
+            <p>
+                Here's to more laughter,<br>
+                more adventures,<br>
+                more achievements,<br>
+                and a lot more good memories. ❤️
+            </p>
+
+            <br>
+
+            <p>
+                Keep being you. ✨
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        Made with ❤️ & a questionable amount of effort 😂
+    </footer>
+
+</body>
+</html>
