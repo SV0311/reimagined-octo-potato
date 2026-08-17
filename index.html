@@ -1,1221 +1,872 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>For Shubham ✨</title>
-
-    <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background: #0f1020;
-            color: white;
-            overflow-x: hidden;
-        }
-
-
-        /* =========================
-           FLOATING EMOJIS
-        ========================== */
-
-        .heart {
-            position: fixed;
-            bottom: -30px;
-            font-size: 20px;
-            animation: floatUp 8s linear infinite;
-            opacity: 0.7;
-            pointer-events: none;
-            z-index: 5;
-        }
-
-        @keyframes floatUp {
-
-            0% {
-                transform: translateY(0) rotate(0deg);
-                opacity: 0;
-            }
-
-            20% {
-                opacity: 0.8;
-            }
-
-            100% {
-                transform: translateY(-110vh) rotate(360deg);
-                opacity: 0;
-            }
-        }
-
-
-        /* =========================
-           HERO SECTION
-        ========================== */
-
-        .hero {
-
-            min-height: 100vh;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            text-align: center;
-
-            padding: 30px;
-
-            background:
-                radial-gradient(
-                    circle at top,
-                    #45315f,
-                    transparent 45%
-                ),
-                linear-gradient(
-                    135deg,
-                    #111225,
-                    #24152d
-                );
-        }
-
-
-        .hero-content {
-
-            max-width: 800px;
-
-            animation: fadeIn 1.5s ease;
-        }
-
-
-        @keyframes fadeIn {
-
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-
-        }
-
-
-        .small-text {
-
-            font-size: 18px;
-
-            letter-spacing: 3px;
-
-            color: #e8c7ff;
-
-            margin-bottom: 20px;
-        }
-
-
-        h1 {
-
-            font-size: clamp(
-                55px,
-                12vw,
-                110px
-            );
-
-            margin-bottom: 15px;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    #ffffff,
-                    #ffb6e6,
-                    #d8b4ff
-                );
-
-            -webkit-background-clip: text;
-
-            -webkit-text-fill-color: transparent;
-        }
-
-
-        .hero p {
-
-            font-size: 20px;
-
-            color: #d8d8df;
-
-            line-height: 1.7;
-
-            margin-bottom: 35px;
-        }
-
-
-        .button {
-
-            display: inline-block;
-
-            padding: 15px 30px;
-
-            border-radius: 50px;
-
-            background: white;
-
-            color: #24152d;
-
-            text-decoration: none;
-
-            font-weight: bold;
-
-            transition: 0.3s;
-
-            cursor: pointer;
-        }
-
-
-        .button:hover {
-
-            transform: scale(1.08);
-
-            box-shadow:
-                0 10px 40px
-                rgba(255,255,255,0.2);
-        }
-
-
-        /* =========================
-           GENERAL SECTIONS
-        ========================== */
-
-        section {
-
-            padding: 100px 25px;
-
-            text-align: center;
-        }
-
-
-        .section-title {
-
-            font-size: 42px;
-
-            margin-bottom: 20px;
-        }
-
-
-        .section-subtitle {
-
-            color: #bdbdc8;
-
-            max-width: 650px;
-
-            margin: 0 auto 50px;
-
-            line-height: 1.7;
-
-            font-size: 18px;
-        }
-
-
-        /* =========================
-           MESSAGE SECTION
-        ========================== */
-
-        .message-box {
-
-            max-width: 780px;
-
-            margin: auto;
-
-            padding: 45px;
-
-            border-radius: 25px;
-
-            background:
-                rgba(255,255,255,0.06);
-
-            border:
-                1px solid
-                rgba(255,255,255,0.1);
-
-            box-shadow:
-                0 20px 60px
-                rgba(0,0,0,0.25);
-        }
-
-
-        .message-box p {
-
-            color: #dddde5;
-
-            font-size: 19px;
-
-            line-height: 1.9;
-        }
-
-
-        /* =========================
-           CARDS
-        ========================== */
-
-        .cards {
-
-            max-width: 1000px;
-
-            margin: auto;
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(
-                    auto-fit,
-                    minmax(220px,1fr)
-                );
-
-            gap: 20px;
-        }
-
-
-        .card {
-
-            padding: 35px 25px;
-
-            border-radius: 22px;
-
-            background:
-                rgba(255,255,255,0.06);
-
-            border:
-                1px solid
-                rgba(255,255,255,0.08);
-
-            transition: 0.3s;
-        }
-
-
-        .card:hover {
-
-            transform: translateY(-10px);
-
-            background:
-                rgba(255,255,255,0.1);
-        }
-
-
-        .emoji {
-
-            font-size: 45px;
-
-            margin-bottom: 15px;
-        }
-
-
-        .card h3 {
-
-            margin-bottom: 10px;
-
-            font-size: 22px;
-        }
-
-
-        .card p {
-
-            color: #bbbcc7;
-
-            line-height: 1.6;
-        }
-
-
-        /* =========================
-           FUNNY SECTION
-        ========================== */
-
-        .funny-section {
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #17152b,
-                    #21162b
-                );
-        }
-
-
-        .funny-box {
-
-            max-width: 850px;
-
-            margin: auto;
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(
-                    auto-fit,
-                    minmax(220px,1fr)
-                );
-
-            gap: 20px;
-        }
-
-
-        .funny-card {
-
-            padding: 30px;
-
-            border-radius: 20px;
-
-            background:
-                rgba(255,255,255,0.05);
-
-            transition: 0.3s;
-        }
-
-
-        .funny-card:hover {
-
-            transform: rotate(-1deg) translateY(-5px);
-
-            background:
-                rgba(255,255,255,0.09);
-        }
-
-
-        .funny-card h3 {
-
-            margin-bottom: 12px;
-        }
-
-
-        .funny-card p {
-
-            color: #c8c8d2;
-
-            line-height: 1.6;
-        }
-
-
-        /* =========================
-           PHOTOS
-        ========================== */
-
-        .photos {
-
-            max-width: 1000px;
-
-            margin: auto;
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(
-                    auto-fit,
-                    minmax(220px,1fr)
-                );
-
-            gap: 20px;
-        }
-
-
-        .photo-placeholder {
-
-            height: 260px;
-
-            border-radius: 20px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #30213b,
-                    #1c2038
-                );
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            color: #aaa;
-
-            border:
-                1px dashed
-                #666;
-
-            font-size: 18px;
-        }
-
-
-        /* =========================
-           APPRECIATION
-        ========================== */
-
-        .appreciation {
-
-            max-width: 850px;
-
-            margin: auto;
-        }
-
-
-        .appreciation p {
-
-            font-size: 20px;
-
-            line-height: 1.9;
-
-            color: #d5d5df;
-        }
-
-
-        /* =========================
-           FINAL SECTION
-        ========================== */
-
-        .final {
-
-            min-height: 85vh;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            background:
-
-                radial-gradient(
-                    circle,
-                    #4b2754,
-                    transparent 50%
-                ),
-
-                #111225;
-        }
-
-
-        .final h2 {
-
-            font-size:
-                clamp(
-                    40px,
-                    8vw,
-                    80px
-                );
-
-            margin-bottom: 25px;
-        }
-
-
-        .final p {
-
-            color: #ccc;
-
-            font-size: 20px;
-
-            line-height: 1.8;
-        }
-
-
-        footer {
-
-            padding: 25px;
-
-            text-align: center;
-
-            color: #777;
-
-            background: #090a14;
-        }
-
-
-        /* =========================
-           MOBILE
-        ========================== */
-
-        @media(max-width:600px) {
-
-            section {
-
-                padding: 75px 20px;
-            }
-
-
-            .message-box {
-
-                padding: 28px 22px;
-            }
-
-
-            .message-box p {
-
-                font-size: 17px;
-            }
-
-
-            .section-title {
-
-                font-size: 34px;
-            }
-
-
-            .hero p {
-
-                font-size: 18px;
-            }
-
-        }
-
-    </style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Something For Shubham 👀</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#090a14;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ---------- BACKGROUND ---------- */
+
+body::before{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:#7b3f98;
+    filter:blur(180px);
+    opacity:.18;
+    top:-200px;
+    left:-150px;
+    z-index:-1;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:450px;
+    height:450px;
+    background:#ff6fae;
+    filter:blur(180px);
+    opacity:.12;
+    bottom:-200px;
+    right:-150px;
+    z-index:-1;
+}
+
+
+/* ---------- COMMON ---------- */
+
+section{
+    min-height:100vh;
+    padding:70px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.container{
+    width:100%;
+    max-width:900px;
+}
+
+button{
+    border:none;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+}
+
+
+/* ---------- HERO ---------- */
+
+.hero h4{
+    color:#c9a7ff;
+    letter-spacing:4px;
+    margin-bottom:25px;
+    font-size:14px;
+}
+
+.hero h1{
+    font-size:clamp(60px,13vw,130px);
+    background:linear-gradient(
+        90deg,
+        #fff,
+        #ffb6df,
+        #cdb5ff
+    );
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    margin-bottom:15px;
+}
+
+.hero p{
+    color:#aaaaba;
+    font-size:19px;
+    line-height:1.7;
+    margin-bottom:35px;
+}
+
+.main-btn{
+    background:white;
+    color:#151522;
+    padding:16px 30px;
+    border-radius:50px;
+    transition:.3s;
+}
+
+.main-btn:hover{
+    transform:scale(1.08);
+    box-shadow:0 10px 40px rgba(255,255,255,.15);
+}
+
+
+/* ---------- GAME SECTION ---------- */
+
+.game h2{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.subtitle{
+    color:#999aaa;
+    margin-bottom:40px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.card{
+    padding:35px 20px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:25px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    background:rgba(255,255,255,.09);
+}
+
+.card .icon{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    margin-bottom:8px;
+}
+
+.card p{
+    color:#9293a5;
+    font-size:14px;
+}
+
+
+/* ---------- POPUP ---------- */
+
+.popup{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    backdrop-filter:blur(8px);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:100;
+    padding:20px;
+}
+
+.popup-box{
+    max-width:450px;
+    width:100%;
+    background:#171827;
+    padding:40px 25px;
+    border-radius:28px;
+    border:1px solid rgba(255,255,255,.1);
+    animation:pop .3s ease;
+}
+
+@keyframes pop{
+    from{
+        transform:scale(.7);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+.popup-box h2{
+    margin-bottom:15px;
+}
+
+.popup-box p{
+    color:#b7b7c4;
+    line-height:1.7;
+    margin-bottom:25px;
+}
+
+.close{
+    background:#fff;
+    padding:12px 25px;
+    border-radius:30px;
+}
+
+
+/* ---------- ENERGY ---------- */
+
+.energy{
+    flex-direction:column;
+}
+
+.energy h2{
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+.meter{
+    width:100%;
+    max-width:600px;
+    height:28px;
+    background:#202130;
+    border-radius:30px;
+    overflow:hidden;
+    margin:30px auto 15px;
+}
+
+.meter-fill{
+    width:98%;
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        #a66cff,
+        #ff72b6
+    );
+    border-radius:30px;
+    animation:load 2s ease;
+}
+
+@keyframes load{
+    from{
+        width:0;
+    }
+    to{
+        width:98%;
+    }
+}
+
+.energy small{
+    color:#88899b;
+}
+
+
+/* ---------- BLAME ---------- */
+
+.blame h2{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.blame-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin-top:35px;
+}
+
+.blame-item{
+    padding:25px;
+    background:rgba(255,255,255,.05);
+    border-radius:20px;
+    transition:.3s;
+}
+
+.blame-item:hover{
+    transform:rotate(-2deg) scale(1.03);
+}
+
+.blame-item span{
+    font-size:30px;
+    display:block;
+    margin-bottom:10px;
+}
+
+.blame-item p{
+    color:#aaaaba;
+}
+
+
+/* ---------- SURPRISE ---------- */
+
+.surprise{
+    flex-direction:column;
+}
+
+.gift{
+    width:150px;
+    height:150px;
+    background:linear-gradient(135deg,#ff6fae,#9d70ff);
+    border-radius:30px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:65px;
+    margin:30px auto;
+    cursor:pointer;
+    transition:.4s;
+    box-shadow:0 20px 60px rgba(0,0,0,.4);
+}
+
+.gift:hover{
+    transform:rotate(8deg) scale(1.08);
+}
+
+.surprise-message{
+    display:none;
+    max-width:600px;
+    margin:auto;
+}
+
+.surprise-message h2{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.surprise-message p{
+    color:#bfc0cb;
+    font-size:18px;
+    line-height:1.8;
+}
+
+
+/* ---------- PHOTOS ---------- */
+
+.photos h2{
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+.photo-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin-top:35px;
+}
+
+.photo{
+    height:220px;
+    border-radius:22px;
+    background:linear-gradient(
+        135deg,
+        #191a2b,
+        #29203b
+    );
+    border:1px dashed #55576b;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#77798c;
+}
+
+
+/* ---------- FINAL ---------- */
+
+.final{
+    background:
+        radial-gradient(
+            circle,
+            #44264f,
+            transparent 55%
+        );
+}
+
+.final h2{
+    font-size:clamp(45px,8vw,80px);
+    margin-bottom:25px;
+}
+
+.final p{
+    color:#bfc0cc;
+    font-size:19px;
+    line-height:1.8;
+}
+
+.final strong{
+    color:white;
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media(max-width:600px){
+
+    section{
+        padding:60px 18px;
+    }
+
+    .cards,
+    .blame-grid,
+    .photo-grid{
+        grid-template-columns:1fr;
+    }
+
+    .game h2,
+    .energy h2,
+    .blame h2,
+    .photos h2{
+        font-size:36px;
+    }
+
+    .card{
+        padding:28px 18px;
+    }
+
+}
+
+</style>
 </head>
 
 
 <body>
 
 
-    <!-- FLOATING EMOJIS -->
+<!-- ================= HERO ================= -->
 
-    <div
-        class="heart"
-        style="left:10%; animation-delay:0s;">
-        💜
-    </div>
+<section class="hero">
 
-    <div
-        class="heart"
-        style="left:25%; animation-delay:2s;">
-        ✨
-    </div>
+<div class="container">
 
-    <div
-        class="heart"
-        style="left:45%; animation-delay:4s;">
-        ❤️
-    </div>
+<h4>THIS IS DEFINITELY NOT A NORMAL BIRTHDAY WISH 👀</h4>
 
-    <div
-        class="heart"
-        style="left:65%; animation-delay:1s;">
-        🌸
-    </div>
+<h1>SHUBHAM</h1>
 
-    <div
-        class="heart"
-        style="left:85%; animation-delay:3s;">
-        💫
-    </div>
+<p>
+Some people have this amazing way of making even ordinary moments
+fun and memorable.<br>
+You’re one of those people.
+</p>
 
+<button class="main-btn" onclick="scrollToGame()">
+Let's See What's Going On →
+</button>
 
+</div>
 
-    <!-- =========================
-         HERO
-    ========================== -->
+</section>
 
-    <section class="hero">
 
-        <div class="hero-content">
 
-            <div class="small-text">
+<!-- ================= CHARACTER ================= -->
 
-                A LITTLE SOMETHING FOR YOU ✨
+<section class="game" id="game">
 
-            </div>
+<div class="container">
 
+<h2>Choose Your Shubham 🎮</h2>
 
-            <h1>
+<p class="subtitle">
+There may be more than one correct answer.
+</p>
 
-                SHUBHAM
 
-            </h1>
+<div class="cards">
 
 
-            <p>
+<div class="card" onclick="showPopup(
+'The Mentor 🧭',
+'Always somehow manages to give the right advice at the right time. No classroom required.'
+)">
 
-                Wishing you a very Happy Birthday
-                May this year bring you lots of success, exciting experiences, peace, and countless reasons to smile.
+<div class="icon">🧭</div>
 
-                <br>
+<h3>The Mentor</h3>
 
-                Another year older, but don’t worry — you’re still young enough to have fun, make some stupid decisions, and call them “memories” later. 😂. 
+<p>Guidance, experience & good advice.</p>
 
-            </p>
+</div>
 
 
-            <a
-                href="#message"
-                class="button">
 
-                Let's Begin ✨
+<div class="card" onclick="showPopup(
+'The Enthusiast ⚡',
+'Why enjoy something normally when you can enjoy it with 200% energy?'
+)">
 
-            </a>
+<div class="icon">⚡</div>
 
-        </div>
+<h3>The Enthusiast</h3>
 
-    </section>
+<p>Energy level: Questionable.</p>
 
+</div>
 
 
-    <!-- =========================
-         MESSAGE
-    ========================== -->
 
-    <section id="message">
+<div class="card" onclick="showPopup(
+'The Fun Department 😂',
+'Normal conversations? Not really his thing. Somehow there is always a funny version.'
+)">
 
-        <h2 class="section-title">
+<div class="icon">😂</div>
 
-            A Little Something For You 😌
+<h3>The Fun Department</h3>
 
-        </h2>
+<p>Seriousness is optional.</p>
 
+</div>
 
-        <p class="section-subtitle">
 
-            Because a simple "Happy Birthday"
-            just didn't feel enough.
 
-        </p>
+<div class="card" onclick="showPopup(
+'The Well-Wisher 🤝',
+'Someone who genuinely wants good things for the people around him.'
+)">
 
+<div class="icon">🤝</div>
 
-        <div class="message-box">
+<h3>The Well-Wisher</h3>
 
-            <p>
+<p>Good intentions. Always.</p>
 
-                Dear Shubham,
+</div>
 
-                <br><br>
 
+</div>
 
-                Some people have this amazing way
-                of making even ordinary moments
-                fun and memorable.
+</div>
 
-                You’re one of those people.
+</section>
 
-                <br><br>
 
 
-                You have this energy that somehow
-                makes even the most random moments
-                worth remembering. Whether it's a
-                serious conversation, a completely
-                unnecessary joke, or just enjoying
-                the moment for no particular reason —
-                there's always something to laugh about. 😂
+<!-- ================= POPUP ================= -->
 
-                <br><br>
+<div class="popup" id="popup">
 
+<div class="popup-box">
 
-                Your enthusiasm, kindness and the way
-                you enjoy every moment are genuinely
-                something to appreciate.
+<h2 id="popupTitle"></h2>
 
-                <br><br>
+<p id="popupText"></p>
 
+<button class="close" onclick="closePopup()">
+Okay 😂
+</button>
 
-                And beyond all the fun and jokes,
-                you're someone whose guidance and
-                support genuinely mean a lot.
+</div>
 
-                There's always something to learn,
-                something to laugh about, or simply
-                a good memory to take away.
+</div>
 
-                <br><br>
 
 
-                So today, I just wanted to take a
-                moment to appreciate all of that.
+<!-- ================= ENERGY ================= -->
 
-                <br><br>
+<section class="energy">
 
+<div class="container">
 
-                Wishing you an amazing birthday
-                and an even more amazing year ahead.
+<h2>Scientific Analysis 🧪</h2>
 
-                May you keep achieving what you
-                work for, keep meeting amazing people,
-                keep enjoying every little moment,
-                and most importantly...
+<p class="subtitle">
+After conducting absolutely zero scientific research...
+</p>
 
-                <br><br>
 
+<h3>SHUBHAM ENERGY LEVEL</h3>
 
-                <strong>
-                    Keep being the same enthusiastic,
-                    kind and slightly crazy person
-                    that makes things more fun. 😂❤️
-                </strong>
+<div class="meter">
 
-            </p>
+<div class="meter-fill"></div>
 
-        </div>
+</div>
 
-    </section>
+<small>98% — remaining 2% probably loading...</small>
 
 
+<br><br><br>
 
-    <!-- =========================
-         WHO HE IS
-    ========================== -->
 
-    <section>
+<h3>ABILITY TO MAKE NORMAL MOMENTS FUN</h3>
 
-        <h2 class="section-title">
+<div class="meter">
 
-            A Few Things About You ✨
+<div class="meter-fill"></div>
 
-        </h2>
+</div>
 
+<small>100% — unfortunately proven.</small>
 
-        <p class="section-subtitle">
+</div>
 
-            Just a few things that make you,
-            well... you.
+</section>
 
-        </p>
 
 
-        <div class="cards">
+<!-- ================= BLAME ================= -->
 
+<section class="blame">
 
-            <div class="card">
+<div class="container">
 
-                <div class="emoji">
+<h2>Things We Can Blame You For 😂</h2>
 
-                    🧑‍🏫
+<p class="subtitle">
+Completely unofficial allegations.
+</p>
 
-                </div>
 
-                <h3>
+<div class="blame-grid">
 
-                    The Mentor
 
-                </h3>
+<div class="blame-item">
 
-                <p>
+<span>😂</span>
 
-                    Always someone to learn from,
-                    whether it's through advice,
-                    experience or just a random
-                    conversation.
+<p>
+Turning random conversations into memories.
+</p>
 
-                </p>
+</div>
 
-            </div>
 
+<div class="blame-item">
 
+<span>⚡</span>
 
-            <div class="card">
+<p>
+Having unnecessarily high enthusiasm.
+</p>
 
-                <div class="emoji">
+</div>
 
-                    ⚡
 
-                </div>
+<div class="blame-item">
 
-                <h3>
+<span>📸</span>
 
-                    The Enthusiast
+<p>
+Creating moments that eventually become stories.
+</p>
 
-                </h3>
+</div>
 
-                <p>
 
-                    Somehow ready to enjoy every
-                    moment and make sure nobody
-                    misses out on the fun.
+<div class="blame-item">
 
-                </p>
+<span>😎</span>
 
-            </div>
+<p>
+Making "let's just enjoy the moment"
+look like a legitimate philosophy.
+</p>
 
+</div>
 
 
-            <div class="card">
+</div>
 
-                <div class="emoji">
+</div>
 
-                    🤝
+</section>
 
-                </div>
 
-                <h3>
 
-                    The Well-Wisher
+<!-- ================= MEMORIES ================= -->
 
-                </h3>
+<section class="photos">
 
-                <p>
+<div class="container">
 
-                    Someone who genuinely wants
-                    to see the people around him
-                    doing well.
+<h2>The Evidence 📸</h2>
 
-                </p>
+<p class="subtitle">
 
-            </div>
+Proof that some of those moments actually happened.
 
+</p>
 
 
-            <div class="card">
+<div class="photo-grid">
 
-                <div class="emoji">
+<div class="photo">
+📸 Memory 01
+</div>
 
-                    😂
+<div class="photo">
+📸 Memory 02
+</div>
 
-                </div>
+<div class="photo">
+📸 Memory 03
+</div>
 
-                <h3>
+<div class="photo">
+📸 Memory 04
+</div>
 
-                    The Fun Department
+</div>
 
-                </h3>
+</div>
 
-                <p>
+</section>
 
-                    Because apparently even normal
-                    conversations need a little
-                    comedy.
 
-                </p>
 
-            </div>
+<!-- ================= GIFT ================= -->
 
+<section class="surprise">
 
-        </div>
+<div class="container">
 
-    </section>
+<h2>There's Something Here... 👀</h2>
 
+<p class="subtitle">
+I wouldn't click it if I were you.
+</p>
 
 
-    <!-- =========================
-         FUNNY SECTION
-    ========================== -->
+<div class="gift" onclick="openGift()">
 
-    <section class="funny-section">
+🎁
 
-        <h2 class="section-title">
+</div>
 
-            The Shubham Effect 😂
 
-        </h2>
+<div class="surprise-message" id="surpriseMessage">
 
+<h2>GOTCHA 😂</h2>
 
-        <p class="section-subtitle">
+<p>
 
-            A few things we've learned along
-            the way...
+Obviously there had to be one final surprise.
 
-        </p>
+<br><br>
 
+Happy Birthday, Shubham! 🎂
 
-        <div class="funny-box">
+<br><br>
 
+Keep the enthusiasm.
+Keep the madness.
+Keep enjoying every moment.
 
-            <div class="funny-card">
+❤️
 
-                <h3>
+</p>
 
-                    Rule #1 😂
+</div>
 
-                </h3>
+</div>
 
-                <p>
+</section>
 
-                    A completely normal conversation
-                    has a very high chance of turning
-                    into something funny.
 
-                </p>
 
-            </div>
+<!-- ================= FINAL ================= -->
 
+<section class="final">
 
+<div class="container">
 
-            <div class="funny-card">
+<h2>
+Happy Birthday, Shubham! 🎂
+</h2>
 
-                <h3>
+<p>
 
-                    Rule #2 😎
+Some people make moments memorable
+without even trying.
 
-                </h3>
+<br><br>
 
-                <p>
+Thanks for being one of them.
 
-                    Why enjoy a moment normally
-                    when you can enjoy it with
-                    maximum enthusiasm?
+<br><br>
 
-                </p>
+<strong>
+Have an amazing year ahead. ❤️
+</strong>
 
-            </div>
+<br><br>
 
+And please...
 
+<br>
 
-            <div class="funny-card">
+don't become too serious this year. 😂
 
-                <h3>
+</p>
 
-                    Rule #3 🤣
+</div>
 
-                </h3>
+</section>
 
-                <p>
 
-                    There will probably be a story
-                    to laugh about later.
 
-                </p>
+<script>
 
-            </div>
 
+function scrollToGame(){
 
+document
+.getElementById("game")
+.scrollIntoView({
+behavior:"smooth"
+});
 
-            <div class="funny-card">
+}
 
-                <h3>
 
-                    Rule #4 ⚡
 
-                </h3>
+function showPopup(title,text){
 
-                <p>
+document
+.getElementById("popupTitle")
+.innerText=title;
 
-                    Energy level:
-                    unnecessarily enthusiastic.
+document
+.getElementById("popupText")
+.innerText=text;
 
-                </p>
+document
+.getElementById("popup")
+.style.display="flex";
 
-            </div>
+}
 
 
-        </div>
 
-    </section>
+function closePopup(){
 
+document
+.getElementById("popup")
+.style.display="none";
 
+}
 
-    <!-- =========================
-         APPRECIATION
-    ========================== -->
 
-    <section>
 
-        <h2 class="section-title">
+function openGift(){
 
-            Things I Genuinely Appreciate ❤️
+document
+.getElementById("surpriseMessage")
+.style.display="block";
 
-        </h2>
+document
+.querySelector(".gift")
+.style.display="none";
 
+}
 
-        <div class="appreciation">
 
-            <p>
 
-                Your guidance.
-
-                <br>
-
-                Your kindness.
-
-                <br>
-
-                Your enthusiasm.
-
-                <br>
-
-                Your ability to enjoy the smallest
-                moments.
-
-                <br>
-
-                Your willingness to help.
-
-                <br>
-
-                And obviously...
-
-                <br><br>
-
-                <strong>
-                    Your sense of humour. 😂
-                </strong>
-
-                <br><br>
-
-                All of these little things make
-                the time spent with you something
-                worth remembering.
-
-            </p>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         MEMORIES
-    ========================== -->
-
-    <section>
-
-        <h2 class="section-title">
-
-            The Memories 📸
-
-        </h2>
-
-
-        <p class="section-subtitle">
-
-            Some moments are better remembered
-            with pictures.
-
-            <br>
-
-            This section is waiting for them. 👀
-
-        </p>
-
-
-        <div class="photos">
-
-
-            <div class="photo-placeholder">
-
-                📸 Memory 01
-
-            </div>
-
-
-            <div class="photo-placeholder">
-
-                📸 Memory 02
-
-            </div>
-
-
-            <div class="photo-placeholder">
-
-                📸 Memory 03
-
-            </div>
-
-
-            <div class="photo-placeholder">
-
-                📸 Memory 04
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         FINAL
-    ========================== -->
-
-    <section class="final">
-
-        <div>
-
-            <h2>
-
-                Happy Birthday, Shubham! 🎂
-
-            </h2>
-
-
-            <p>
-
-                Here's to another year of
-
-                <br>
-
-                laughter,
-
-                <br>
-
-                adventures,
-
-                <br>
-
-                achievements,
-
-                <br>
-
-                random funny moments,
-
-                <br>
-
-                and lots of reasons to celebrate.
-
-                ❤️
-
-            </p>
-
-
-            <br>
-
-
-            <p>
-
-                Keep enjoying every moment.
-
-                <br>
-
-                Keep that enthusiasm alive.
-
-                <br>
-
-                And keep being you. ✨
-
-            </p>
-
-
-            <br>
-
-
-            <p>
-
-                <strong>
-
-                    Have an absolutely amazing birthday! 🎉
-
-                </strong>
-
-            </p>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        Made with ❤️, respect & a questionable
-        amount of effort 😂
-
-    </footer>
+</script>
 
 
 </body>
