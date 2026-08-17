@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For Shubham 🎂</title>
+
+    <title>For Shubham ✨</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -23,17 +26,23 @@
             overflow-x: hidden;
         }
 
-        /* Floating hearts */
+
+        /* =========================
+           FLOATING EMOJIS
+        ========================== */
+
         .heart {
             position: fixed;
-            bottom: -20px;
+            bottom: -30px;
             font-size: 20px;
-            animation: floatUp 7s linear infinite;
+            animation: floatUp 8s linear infinite;
             opacity: 0.7;
             pointer-events: none;
+            z-index: 5;
         }
 
         @keyframes floatUp {
+
             0% {
                 transform: translateY(0) rotate(0deg);
                 opacity: 0;
@@ -49,222 +58,606 @@
             }
         }
 
-        /* Hero */
+
+        /* =========================
+           HERO SECTION
+        ========================== */
+
         .hero {
+
             min-height: 100vh;
+
             display: flex;
             align-items: center;
             justify-content: center;
+
             text-align: center;
+
             padding: 30px;
+
             background:
-                radial-gradient(circle at top, #45315f, transparent 45%),
-                linear-gradient(135deg, #111225, #24152d);
+                radial-gradient(
+                    circle at top,
+                    #45315f,
+                    transparent 45%
+                ),
+                linear-gradient(
+                    135deg,
+                    #111225,
+                    #24152d
+                );
         }
+
 
         .hero-content {
+
             max-width: 800px;
+
+            animation: fadeIn 1.5s ease;
         }
 
+
+        @keyframes fadeIn {
+
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
         .small-text {
+
             font-size: 18px;
+
             letter-spacing: 3px;
+
             color: #e8c7ff;
+
             margin-bottom: 20px;
         }
 
+
         h1 {
-            font-size: clamp(55px, 12vw, 110px);
+
+            font-size: clamp(
+                55px,
+                12vw,
+                110px
+            );
+
             margin-bottom: 15px;
-            background: linear-gradient(90deg, #ffffff, #ffb6e6, #d8b4ff);
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #ffffff,
+                    #ffb6e6,
+                    #d8b4ff
+                );
+
             -webkit-background-clip: text;
+
             -webkit-text-fill-color: transparent;
         }
 
+
         .hero p {
+
             font-size: 20px;
+
             color: #d8d8df;
+
             line-height: 1.7;
+
             margin-bottom: 35px;
         }
 
+
         .button {
+
             display: inline-block;
+
             padding: 15px 30px;
+
             border-radius: 50px;
+
             background: white;
+
             color: #24152d;
+
             text-decoration: none;
+
             font-weight: bold;
+
             transition: 0.3s;
+
             cursor: pointer;
         }
 
+
         .button:hover {
+
             transform: scale(1.08);
-            box-shadow: 0 10px 40px rgba(255, 255, 255, 0.2);
+
+            box-shadow:
+                0 10px 40px
+                rgba(255,255,255,0.2);
         }
 
-        /* Sections */
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================== */
+
         section {
+
             padding: 100px 25px;
+
             text-align: center;
         }
 
+
         .section-title {
+
             font-size: 42px;
+
             margin-bottom: 20px;
         }
 
+
         .section-subtitle {
+
             color: #bdbdc8;
+
             max-width: 650px;
+
             margin: 0 auto 50px;
+
             line-height: 1.7;
+
+            font-size: 18px;
         }
 
-        /* Message */
+
+        /* =========================
+           MESSAGE SECTION
+        ========================== */
+
         .message-box {
-            max-width: 750px;
+
+            max-width: 780px;
+
             margin: auto;
-            padding: 40px;
+
+            padding: 45px;
+
             border-radius: 25px;
-            background: rgba(255,255,255,0.06);
-            border: 1px solid rgba(255,255,255,0.1);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+
+            background:
+                rgba(255,255,255,0.06);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.1);
+
+            box-shadow:
+                0 20px 60px
+                rgba(0,0,0,0.25);
         }
+
 
         .message-box p {
+
             color: #dddde5;
+
             font-size: 19px;
+
             line-height: 1.9;
         }
 
-        /* Cards */
+
+        /* =========================
+           CARDS
+        ========================== */
+
         .cards {
+
             max-width: 1000px;
+
             margin: auto;
+
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(220px,1fr)
+                );
+
             gap: 20px;
         }
 
+
         .card {
+
             padding: 35px 25px;
+
             border-radius: 22px;
-            background: rgba(255,255,255,0.06);
-            border: 1px solid rgba(255,255,255,0.08);
+
+            background:
+                rgba(255,255,255,0.06);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.08);
+
             transition: 0.3s;
         }
 
+
         .card:hover {
+
             transform: translateY(-10px);
-            background: rgba(255,255,255,0.1);
+
+            background:
+                rgba(255,255,255,0.1);
         }
 
+
         .emoji {
+
             font-size: 45px;
+
             margin-bottom: 15px;
         }
 
+
         .card h3 {
+
             margin-bottom: 10px;
+
+            font-size: 22px;
         }
 
+
         .card p {
+
             color: #bbbcc7;
+
             line-height: 1.6;
         }
 
-        /* Photos */
-        .photos {
-            max-width: 1000px;
+
+        /* =========================
+           FUNNY SECTION
+        ========================== */
+
+        .funny-section {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #17152b,
+                    #21162b
+                );
+        }
+
+
+        .funny-box {
+
+            max-width: 850px;
+
             margin: auto;
+
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(220px,1fr)
+                );
+
             gap: 20px;
         }
 
-        .photo-placeholder {
-            height: 260px;
+
+        .funny-card {
+
+            padding: 30px;
+
             border-radius: 20px;
-            background: linear-gradient(135deg, #30213b, #1c2038);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #aaa;
-            border: 1px dashed #666;
+
+            background:
+                rgba(255,255,255,0.05);
+
+            transition: 0.3s;
         }
 
-        /* Final */
-        .final {
-            min-height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+
+        .funny-card:hover {
+
+            transform: rotate(-1deg) translateY(-5px);
+
             background:
-                radial-gradient(circle, #4b2754, transparent 50%),
+                rgba(255,255,255,0.09);
+        }
+
+
+        .funny-card h3 {
+
+            margin-bottom: 12px;
+        }
+
+
+        .funny-card p {
+
+            color: #c8c8d2;
+
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           PHOTOS
+        ========================== */
+
+        .photos {
+
+            max-width: 1000px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(220px,1fr)
+                );
+
+            gap: 20px;
+        }
+
+
+        .photo-placeholder {
+
+            height: 260px;
+
+            border-radius: 20px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #30213b,
+                    #1c2038
+                );
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: #aaa;
+
+            border:
+                1px dashed
+                #666;
+
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           APPRECIATION
+        ========================== */
+
+        .appreciation {
+
+            max-width: 850px;
+
+            margin: auto;
+        }
+
+
+        .appreciation p {
+
+            font-size: 20px;
+
+            line-height: 1.9;
+
+            color: #d5d5df;
+        }
+
+
+        /* =========================
+           FINAL SECTION
+        ========================== */
+
+        .final {
+
+            min-height: 85vh;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background:
+
+                radial-gradient(
+                    circle,
+                    #4b2754,
+                    transparent 50%
+                ),
+
                 #111225;
         }
 
+
         .final h2 {
-            font-size: clamp(40px, 8vw, 80px);
+
+            font-size:
+                clamp(
+                    40px,
+                    8vw,
+                    80px
+                );
+
             margin-bottom: 25px;
         }
 
+
         .final p {
+
             color: #ccc;
+
             font-size: 20px;
+
             line-height: 1.8;
         }
 
+
         footer {
+
             padding: 25px;
+
             text-align: center;
+
             color: #777;
+
             background: #090a14;
         }
 
+
+        /* =========================
+           MOBILE
+        ========================== */
+
         @media(max-width:600px) {
+
             section {
+
                 padding: 75px 20px;
             }
 
+
             .message-box {
-                padding: 25px;
+
+                padding: 28px 22px;
             }
+
+
+            .message-box p {
+
+                font-size: 17px;
+            }
+
+
+            .section-title {
+
+                font-size: 34px;
+            }
+
+
+            .hero p {
+
+                font-size: 18px;
+            }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-    <!-- Floating hearts -->
-    <div class="heart" style="left:10%; animation-delay:0s;">💜</div>
-    <div class="heart" style="left:25%; animation-delay:2s;">✨</div>
-    <div class="heart" style="left:45%; animation-delay:4s;">❤️</div>
-    <div class="heart" style="left:65%; animation-delay:1s;">🌸</div>
-    <div class="heart" style="left:85%; animation-delay:3s;">💫</div>
+
+    <!-- FLOATING EMOJIS -->
+
+    <div
+        class="heart"
+        style="left:10%; animation-delay:0s;">
+        💜
+    </div>
+
+    <div
+        class="heart"
+        style="left:25%; animation-delay:2s;">
+        ✨
+    </div>
+
+    <div
+        class="heart"
+        style="left:45%; animation-delay:4s;">
+        ❤️
+    </div>
+
+    <div
+        class="heart"
+        style="left:65%; animation-delay:1s;">
+        🌸
+    </div>
+
+    <div
+        class="heart"
+        style="left:85%; animation-delay:3s;">
+        💫
+    </div>
 
 
-    <!-- HERO -->
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
     <section class="hero">
 
         <div class="hero-content">
 
             <div class="small-text">
+
                 A LITTLE SOMETHING FOR YOU ✨
+
             </div>
 
-            <h1>SHUBHAM</h1>
+
+            <h1>
+
+                SHUBHAM
+
+            </h1>
+
 
             <p>
-                Because some people deserve more than just a
-                simple "Happy Birthday." 🎂
+
+                Some people have this amazing way
+                of making even ordinary moments
+                fun and memorable.
+
+                <br>
+
+                You’re one of those people. ❤️
+
             </p>
 
-            <a href="#message" class="button">
-                Open Your Surprise ✨
+
+            <a
+                href="#message"
+                class="button">
+
+                Let's Begin ✨
+
             </a>
 
         </div>
@@ -272,48 +665,98 @@
     </section>
 
 
-    <!-- MESSAGE -->
+
+    <!-- =========================
+         MESSAGE
+    ========================== -->
+
     <section id="message">
 
         <h2 class="section-title">
-            Okay... Let's Talk About You 😌
+
+            A Little Something For You 😌
+
         </h2>
 
+
         <p class="section-subtitle">
-            Not exactly sure what category you fall into...
-            friend? mentor? special person?
-            Let's just say you're someone worth celebrating. 😂
+
+            Because a simple "Happy Birthday"
+            just didn't feel enough.
+
         </p>
+
 
         <div class="message-box">
 
             <p>
+
                 Dear Shubham,
+
                 <br><br>
 
-                Some people enter your life with a proper
-                introduction, a defined relationship and a label.
-                And then there are people who somehow become
-                important without any of that.
+
+                Some people have this amazing way
+                of making even ordinary moments
+                fun and memorable.
+
+                You’re one of those people.
+
                 <br><br>
 
-                You are probably somewhere in that second category. 😄
+
+                You have this energy that somehow
+                makes even the most random moments
+                worth remembering. Whether it's a
+                serious conversation, a completely
+                unnecessary joke, or just enjoying
+                the moment for no particular reason —
+                there's always something to laugh about. 😂
+
                 <br><br>
 
-                So today, instead of writing some extremely
-                formal birthday message, I thought...
-                why not make an entire website? 😂
+
+                Your enthusiasm, kindness and the way
+                you enjoy every moment are genuinely
+                something to appreciate.
+
                 <br><br>
 
-                Wishing you an amazing birthday and an even more
-                amazing year ahead. May you get everything you're
-                working for, plenty of reasons to smile, and
-                obviously... a little less stress. 😌
+
+                And beyond all the fun and jokes,
+                you're someone whose guidance and
+                support genuinely mean a lot.
+
+                There's always something to learn,
+                something to laugh about, or simply
+                a good memory to take away.
+
                 <br><br>
 
-                Stay the same amazing person you are.
-                And yes, you're allowed to feel special today.
-                Just don't let it get to your head. 😂
+
+                So today, I just wanted to take a
+                moment to appreciate all of that.
+
+                <br><br>
+
+
+                Wishing you an amazing birthday
+                and an even more amazing year ahead.
+
+                May you keep achieving what you
+                work for, keep meeting amazing people,
+                keep enjoying every little moment,
+                and most importantly...
+
+                <br><br>
+
+
+                <strong>
+                    Keep being the same enthusiastic,
+                    kind and slightly crazy person
+                    that makes things more fun. 😂❤️
+                </strong>
+
             </p>
 
         </div>
@@ -321,119 +764,443 @@
     </section>
 
 
-    <!-- WHY SPECIAL -->
+
+    <!-- =========================
+         WHO HE IS
+    ========================== -->
+
     <section>
 
         <h2 class="section-title">
+
             A Few Things About You ✨
+
         </h2>
 
+
         <p class="section-subtitle">
-            Some observations that simply cannot be ignored.
+
+            Just a few things that make you,
+            well... you.
+
         </p>
+
 
         <div class="cards">
 
-            <div class="card">
-                <div class="emoji">😎</div>
-                <h3>The Vibe</h3>
-                <p>
-                    Somehow you manage to have that
-                    "I've got this" energy even when
-                    absolutely nothing makes sense.
-                </p>
-            </div>
 
             <div class="card">
-                <div class="emoji">😂</div>
-                <h3>Certified Legend</h3>
+
+                <div class="emoji">
+
+                    🧑‍🏫
+
+                </div>
+
+                <h3>
+
+                    The Mentor
+
+                </h3>
+
                 <p>
-                    There are people who are memorable...
-                    and then there are people who somehow
-                    become stories.
+
+                    Always someone to learn from,
+                    whether it's through advice,
+                    experience or just a random
+                    conversation.
+
                 </p>
+
             </div>
 
-            <div class="card">
-                <div class="emoji">✨</div>
-                <h3>Good Human</h3>
-                <p>
-                    Behind all the jokes and chaos,
-                    you're genuinely someone who deserves
-                    respect and appreciation.
-                </p>
-            </div>
+
 
             <div class="card">
-                <div class="emoji">🎯</div>
-                <h3>Keep Going</h3>
+
+                <div class="emoji">
+
+                    ⚡
+
+                </div>
+
+                <h3>
+
+                    The Enthusiast
+
+                </h3>
+
                 <p>
-                    Whatever you're working towards,
-                    I hope this year takes you a few
-                    steps closer to it.
+
+                    Somehow ready to enjoy every
+                    moment and make sure nobody
+                    misses out on the fun.
+
                 </p>
+
             </div>
+
+
+
+            <div class="card">
+
+                <div class="emoji">
+
+                    🤝
+
+                </div>
+
+                <h3>
+
+                    The Well-Wisher
+
+                </h3>
+
+                <p>
+
+                    Someone who genuinely wants
+                    to see the people around him
+                    doing well.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <div class="emoji">
+
+                    😂
+
+                </div>
+
+                <h3>
+
+                    The Fun Department
+
+                </h3>
+
+                <p>
+
+                    Because apparently even normal
+                    conversations need a little
+                    comedy.
+
+                </p>
+
+            </div>
+
 
         </div>
 
     </section>
 
 
-    <!-- PHOTOS -->
+
+    <!-- =========================
+         FUNNY SECTION
+    ========================== -->
+
+    <section class="funny-section">
+
+        <h2 class="section-title">
+
+            The Shubham Effect 😂
+
+        </h2>
+
+
+        <p class="section-subtitle">
+
+            A few things we've learned along
+            the way...
+
+        </p>
+
+
+        <div class="funny-box">
+
+
+            <div class="funny-card">
+
+                <h3>
+
+                    Rule #1 😂
+
+                </h3>
+
+                <p>
+
+                    A completely normal conversation
+                    has a very high chance of turning
+                    into something funny.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="funny-card">
+
+                <h3>
+
+                    Rule #2 😎
+
+                </h3>
+
+                <p>
+
+                    Why enjoy a moment normally
+                    when you can enjoy it with
+                    maximum enthusiasm?
+
+                </p>
+
+            </div>
+
+
+
+            <div class="funny-card">
+
+                <h3>
+
+                    Rule #3 🤣
+
+                </h3>
+
+                <p>
+
+                    There will probably be a story
+                    to laugh about later.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="funny-card">
+
+                <h3>
+
+                    Rule #4 ⚡
+
+                </h3>
+
+                <p>
+
+                    Energy level:
+                    unnecessarily enthusiastic.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         APPRECIATION
+    ========================== -->
+
     <section>
 
         <h2 class="section-title">
-            Memories 📸
+
+            Things I Genuinely Appreciate ❤️
+
         </h2>
 
-        <p class="section-subtitle">
-            This section is waiting for some legendary pictures.
-            We'll add them here later. 👀
-        </p>
 
-        <div class="photos">
+        <div class="appreciation">
 
-            <div class="photo-placeholder">
-                📸 Photo 1
-            </div>
+            <p>
 
-            <div class="photo-placeholder">
-                📸 Photo 2
-            </div>
+                Your guidance.
 
-            <div class="photo-placeholder">
-                📸 Photo 3
-            </div>
+                <br>
 
-            <div class="photo-placeholder">
-                📸 Photo 4
-            </div>
+                Your kindness.
+
+                <br>
+
+                Your enthusiasm.
+
+                <br>
+
+                Your ability to enjoy the smallest
+                moments.
+
+                <br>
+
+                Your willingness to help.
+
+                <br>
+
+                And obviously...
+
+                <br><br>
+
+                <strong>
+                    Your sense of humour. 😂
+                </strong>
+
+                <br><br>
+
+                All of these little things make
+                the time spent with you something
+                worth remembering.
+
+            </p>
 
         </div>
 
     </section>
 
 
-    <!-- FINAL -->
+
+    <!-- =========================
+         MEMORIES
+    ========================== -->
+
+    <section>
+
+        <h2 class="section-title">
+
+            The Memories 📸
+
+        </h2>
+
+
+        <p class="section-subtitle">
+
+            Some moments are better remembered
+            with pictures.
+
+            <br>
+
+            This section is waiting for them. 👀
+
+        </p>
+
+
+        <div class="photos">
+
+
+            <div class="photo-placeholder">
+
+                📸 Memory 01
+
+            </div>
+
+
+            <div class="photo-placeholder">
+
+                📸 Memory 02
+
+            </div>
+
+
+            <div class="photo-placeholder">
+
+                📸 Memory 03
+
+            </div>
+
+
+            <div class="photo-placeholder">
+
+                📸 Memory 04
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FINAL
+    ========================== -->
+
     <section class="final">
 
         <div>
 
             <h2>
+
                 Happy Birthday, Shubham! 🎂
+
             </h2>
 
+
             <p>
-                Here's to more laughter,<br>
-                more adventures,<br>
-                more achievements,<br>
-                and a lot more good memories. ❤️
+
+                Here's to another year of
+
+                <br>
+
+                laughter,
+
+                <br>
+
+                adventures,
+
+                <br>
+
+                achievements,
+
+                <br>
+
+                random funny moments,
+
+                <br>
+
+                and lots of reasons to celebrate.
+
+                ❤️
+
             </p>
+
 
             <br>
 
+
             <p>
-                Keep being you. ✨
+
+                Keep enjoying every moment.
+
+                <br>
+
+                Keep that enthusiasm alive.
+
+                <br>
+
+                And keep being you. ✨
+
+            </p>
+
+
+            <br>
+
+
+            <p>
+
+                <strong>
+
+                    Have an absolutely amazing birthday! 🎉
+
+                </strong>
+
             </p>
 
         </div>
@@ -441,9 +1208,17 @@
     </section>
 
 
+
+    <!-- FOOTER -->
+
     <footer>
-        Made with ❤️ & a questionable amount of effort 😂
+
+        Made with ❤️, respect & a questionable
+        amount of effort 😂
+
     </footer>
 
+
 </body>
+
 </html>
