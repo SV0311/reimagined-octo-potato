@@ -3,872 +3,858 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Something For Shubham 👀</title>
+<title>shubham.exe</title>
 
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-    font-family:Arial, sans-serif;
-    background:#090a14;
-    color:white;
-    overflow-x:hidden;
+body {
+    background: #0b0b0d;
+    color: #eeeeee;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 
-/* ---------- BACKGROUND ---------- */
-
-body::before{
-    content:"";
-    position:fixed;
-    width:500px;
-    height:500px;
-    background:#7b3f98;
-    filter:blur(180px);
-    opacity:.18;
-    top:-200px;
-    left:-150px;
-    z-index:-1;
+/* subtle background */
+body::before {
+    content: "";
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    background: #663399;
+    filter: blur(180px);
+    opacity: 0.08;
+    top: -250px;
+    right: -200px;
+    pointer-events: none;
 }
 
-body::after{
-    content:"";
-    position:fixed;
-    width:450px;
-    height:450px;
-    background:#ff6fae;
-    filter:blur(180px);
-    opacity:.12;
-    bottom:-200px;
-    right:-150px;
-    z-index:-1;
+.container {
+    width: min(1100px, 90%);
+    margin: auto;
 }
 
+/* ================= NAV ================= */
 
-/* ---------- COMMON ---------- */
-
-section{
-    min-height:100vh;
-    padding:70px 20px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 22px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 20;
+    background: rgba(11,11,13,0.75);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
-.container{
-    width:100%;
-    max-width:900px;
+.logo {
+    font-family: monospace;
+    font-size: 15px;
+    color: #aaa;
 }
 
-button{
-    border:none;
-    cursor:pointer;
-    font-size:16px;
-    font-weight:bold;
+.status {
+    font-family: monospace;
+    font-size: 12px;
+    color: #777;
 }
 
-
-/* ---------- HERO ---------- */
-
-.hero h4{
-    color:#c9a7ff;
-    letter-spacing:4px;
-    margin-bottom:25px;
-    font-size:14px;
+.dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background: #72d572;
+    border-radius: 50%;
+    margin-right: 7px;
 }
 
-.hero h1{
-    font-size:clamp(60px,13vw,130px);
-    background:linear-gradient(
-        90deg,
-        #fff,
-        #ffb6df,
-        #cdb5ff
-    );
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-    margin-bottom:15px;
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
 }
 
-.hero p{
-    color:#aaaaba;
-    font-size:19px;
-    line-height:1.7;
-    margin-bottom:35px;
+.hero-content {
+    max-width: 850px;
 }
 
-.main-btn{
-    background:white;
-    color:#151522;
-    padding:16px 30px;
-    border-radius:50px;
-    transition:.3s;
+.terminal {
+    color: #777;
+    font-family: monospace;
+    font-size: 14px;
+    margin-bottom: 30px;
 }
 
-.main-btn:hover{
-    transform:scale(1.08);
-    box-shadow:0 10px 40px rgba(255,255,255,.15);
+.hero h1 {
+    font-size: clamp(65px, 12vw, 150px);
+    letter-spacing: -7px;
+    line-height: 0.9;
+    font-weight: 700;
 }
 
-
-/* ---------- GAME SECTION ---------- */
-
-.game h2{
-    font-size:45px;
-    margin-bottom:15px;
+.hero h1 span {
+    color: #777;
 }
 
-.subtitle{
-    color:#999aaa;
-    margin-bottom:40px;
+.hero-description {
+    max-width: 600px;
+    margin-top: 35px;
+    color: #8e8e96;
+    font-size: 18px;
+    line-height: 1.7;
 }
 
-.cards{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:18px;
+.enter {
+    margin-top: 40px;
+    padding: 14px 24px;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.card{
-    padding:35px 20px;
-    background:rgba(255,255,255,.05);
-    border:1px solid rgba(255,255,255,.08);
-    border-radius:25px;
-    transition:.3s;
+.enter:hover {
+    background: #fff;
+    color: #000;
 }
 
-.card:hover{
-    transform:translateY(-8px);
-    background:rgba(255,255,255,.09);
+/* ================= SECTIONS ================= */
+
+section {
+    padding: 130px 0;
 }
 
-.card .icon{
-    font-size:45px;
-    margin-bottom:15px;
+.section-label {
+    color: #666;
+    font-family: monospace;
+    font-size: 13px;
+    margin-bottom: 35px;
 }
 
-.card h3{
-    margin-bottom:8px;
+.section-title {
+    font-size: clamp(35px, 5vw, 60px);
+    letter-spacing: -2px;
+    margin-bottom: 50px;
 }
 
-.card p{
-    color:#9293a5;
-    font-size:14px;
+/* ================= PROFILE ================= */
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
-
-/* ---------- POPUP ---------- */
-
-.popup{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.75);
-    backdrop-filter:blur(8px);
-    display:none;
-    align-items:center;
-    justify-content:center;
-    z-index:100;
-    padding:20px;
+.profile-card {
+    border: 1px solid #252529;
+    background: #111114;
+    padding: 35px;
+    border-radius: 12px;
 }
 
-.popup-box{
-    max-width:450px;
-    width:100%;
-    background:#171827;
-    padding:40px 25px;
-    border-radius:28px;
-    border:1px solid rgba(255,255,255,.1);
-    animation:pop .3s ease;
+.profile-card .key {
+    font-family: monospace;
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 10px;
 }
 
-@keyframes pop{
-    from{
-        transform:scale(.7);
-        opacity:0;
-    }
-    to{
-        transform:scale(1);
-        opacity:1;
-    }
+.profile-card .value {
+    font-size: 22px;
 }
 
-.popup-box h2{
-    margin-bottom:15px;
+.profile-card.full {
+    grid-column: span 2;
 }
 
-.popup-box p{
-    color:#b7b7c4;
-    line-height:1.7;
-    margin-bottom:25px;
+/* ================= INTERACTIVE ================= */
+
+.interactive {
+    border-top: 1px solid #202024;
 }
 
-.close{
-    background:#fff;
-    padding:12px 25px;
-    border-radius:30px;
+.interactive-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
 }
 
-
-/* ---------- ENERGY ---------- */
-
-.energy{
-    flex-direction:column;
+.command {
+    font-family: monospace;
+    color: #888;
+    line-height: 2;
 }
 
-.energy h2{
-    font-size:45px;
-    margin-bottom:10px;
+.command span {
+    color: #ddd;
 }
 
-.meter{
-    width:100%;
-    max-width:600px;
-    height:28px;
-    background:#202130;
-    border-radius:30px;
-    overflow:hidden;
-    margin:30px auto 15px;
+.console {
+    background: #101012;
+    border: 1px solid #252529;
+    border-radius: 10px;
+    padding: 25px;
+    min-height: 230px;
+    font-family: monospace;
+    color: #999;
 }
 
-.meter-fill{
-    width:98%;
-    height:100%;
-    background:linear-gradient(
-        90deg,
-        #a66cff,
-        #ff72b6
-    );
-    border-radius:30px;
-    animation:load 2s ease;
+.console-line {
+    margin-bottom: 12px;
 }
 
-@keyframes load{
-    from{
-        width:0;
-    }
-    to{
-        width:98%;
-    }
+.console-line strong {
+    color: #eee;
 }
 
-.energy small{
-    color:#88899b;
+#output {
+    color: #aaa;
+    margin-top: 20px;
+    line-height: 1.7;
 }
 
+/* ================= MOMENTS ================= */
 
-/* ---------- BLAME ---------- */
-
-.blame h2{
-    font-size:45px;
-    margin-bottom:15px;
+.moments {
+    border-top: 1px solid #202024;
 }
 
-.blame-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
-    margin-top:35px;
+.moment-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
 }
 
-.blame-item{
-    padding:25px;
-    background:rgba(255,255,255,.05);
-    border-radius:20px;
-    transition:.3s;
+.moment {
+    height: 190px;
+    border: 1px solid #252529;
+    background: #111114;
+    border-radius: 10px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.blame-item:hover{
-    transform:rotate(-2deg) scale(1.03);
+.moment:hover {
+    transform: translateY(-5px);
+    border-color: #555;
 }
 
-.blame-item span{
-    font-size:30px;
-    display:block;
-    margin-bottom:10px;
+.moment-number {
+    font-family: monospace;
+    color: #555;
 }
 
-.blame-item p{
-    color:#aaaaba;
+.moment-text {
+    color: #aaa;
+    line-height: 1.5;
 }
 
+/* ================= PHOTO PLACEHOLDERS ================= */
 
-/* ---------- SURPRISE ---------- */
-
-.surprise{
-    flex-direction:column;
+.archive {
+    border-top: 1px solid #202024;
 }
 
-.gift{
-    width:150px;
-    height:150px;
-    background:linear-gradient(135deg,#ff6fae,#9d70ff);
-    border-radius:30px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:65px;
-    margin:30px auto;
-    cursor:pointer;
-    transition:.4s;
-    box-shadow:0 20px 60px rgba(0,0,0,.4);
+.archive-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
 }
 
-.gift:hover{
-    transform:rotate(8deg) scale(1.08);
+.photo {
+    height: 330px;
+    background: #111114;
+    border: 1px solid #252529;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #444;
+    font-family: monospace;
+    transition: 0.3s;
 }
 
-.surprise-message{
-    display:none;
-    max-width:600px;
-    margin:auto;
+.photo:hover {
+    border-color: #666;
+    color: #888;
 }
 
-.surprise-message h2{
-    font-size:50px;
-    margin-bottom:20px;
+/* ================= MESSAGE ================= */
+
+.message {
+    border-top: 1px solid #202024;
 }
 
-.surprise-message p{
-    color:#bfc0cb;
-    font-size:18px;
-    line-height:1.8;
+.message-box {
+    max-width: 750px;
+    border-left: 2px solid #444;
+    padding-left: 30px;
 }
 
-
-/* ---------- PHOTOS ---------- */
-
-.photos h2{
-    font-size:45px;
-    margin-bottom:10px;
+.message-box p {
+    color: #aaa;
+    font-size: 21px;
+    line-height: 1.8;
 }
 
-.photo-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
-    margin-top:35px;
+.message-box strong {
+    color: #eee;
 }
 
-.photo{
-    height:220px;
-    border-radius:22px;
-    background:linear-gradient(
-        135deg,
-        #191a2b,
-        #29203b
-    );
-    border:1px dashed #55576b;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#77798c;
+/* ================= FINAL ================= */
+
+.final {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #202024;
 }
 
-
-/* ---------- FINAL ---------- */
-
-.final{
-    background:
-        radial-gradient(
-            circle,
-            #44264f,
-            transparent 55%
-        );
+.final h2 {
+    font-size: clamp(50px, 9vw, 110px);
+    letter-spacing: -5px;
+    line-height: 0.95;
 }
 
-.final h2{
-    font-size:clamp(45px,8vw,80px);
-    margin-bottom:25px;
+.final p {
+    color: #777;
+    font-family: monospace;
+    margin-top: 30px;
 }
 
-.final p{
-    color:#bfc0cc;
-    font-size:19px;
-    line-height:1.8;
+footer {
+    padding: 30px 5%;
+    border-top: 1px solid #202024;
+    color: #444;
+    font-family: monospace;
+    font-size: 12px;
 }
 
-.final strong{
-    color:white;
+/* ================= POPUP ================= */
+
+.popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    padding: 20px;
 }
 
+.popup-box {
+    max-width: 500px;
+    width: 100%;
+    background: #141416;
+    border: 1px solid #333;
+    padding: 35px;
+    border-radius: 12px;
+}
 
-/* ---------- MOBILE ---------- */
+.popup-box h3 {
+    margin-bottom: 15px;
+}
 
-@media(max-width:600px){
+.popup-box p {
+    color: #999;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
 
-    section{
-        padding:60px 18px;
+.close {
+    padding: 10px 20px;
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:700px) {
+
+    nav {
+        padding: 18px 5%;
     }
 
-    .cards,
-    .blame-grid,
-    .photo-grid{
-        grid-template-columns:1fr;
+    .hero h1 {
+        letter-spacing: -4px;
     }
 
-    .game h2,
-    .energy h2,
-    .blame h2,
-    .photos h2{
-        font-size:36px;
+    section {
+        padding: 90px 0;
     }
 
-    .card{
-        padding:28px 18px;
+    .profile-grid,
+    .interactive-box,
+    .moment-grid,
+    .archive-grid {
+        grid-template-columns: 1fr;
     }
 
+    .profile-card.full {
+        grid-column: span 1;
+    }
+
+    .photo {
+        height: 250px;
+    }
+
+    .message-box p {
+        font-size: 18px;
+    }
 }
-
 </style>
 </head>
 
-
 <body>
 
+<!-- NAV -->
 
-<!-- ================= HERO ================= -->
+<nav>
+    <div class="logo">shubham.exe</div>
+
+    <div class="status">
+        <span class="dot"></span>
+        ONLINE
+    </div>
+</nav>
+
+
+<!-- HERO -->
 
 <section class="hero">
 
 <div class="container">
 
-<h4>THIS IS DEFINITELY NOT A NORMAL BIRTHDAY WISH 👀</h4>
+    <div class="hero-content">
 
-<h1>SHUBHAM</h1>
+        <div class="terminal">
+            C:\users\you&gt; run shubham.exe
+        </div>
 
-<p>
-Some people have this amazing way of making even ordinary moments
-fun and memorable.<br>
-You’re one of those people.
-</p>
+        <h1>
+            SHUBHAM<span>.</span>
+        </h1>
 
-<button class="main-btn" onclick="scrollToGame()">
-Let's See What's Going On →
-</button>
+        <p class="hero-description">
+            A small digital experiment documenting
+            one particular human who somehow manages
+            to turn ordinary moments into memorable ones.
+        </p>
+
+        <button class="enter" onclick="goTo('profile')">
+            [ ENTER ]
+        </button>
+
+    </div>
 
 </div>
 
 </section>
 
 
+<!-- PROFILE -->
 
-<!-- ================= CHARACTER ================= -->
-
-<section class="game" id="game">
+<section id="profile">
 
 <div class="container">
 
-<h2>Choose Your Shubham 🎮</h2>
+    <div class="section-label">
+        01 / BASIC INFORMATION
+    </div>
 
-<p class="subtitle">
-There may be more than one correct answer.
-</p>
+    <h2 class="section-title">
+        System Information
+    </h2>
 
+    <div class="profile-grid">
 
-<div class="cards">
+        <div class="profile-card">
 
+            <div class="key">NAME</div>
 
-<div class="card" onclick="showPopup(
-'The Mentor 🧭',
-'Always somehow manages to give the right advice at the right time. No classroom required.'
-)">
+            <div class="value">Shubham</div>
 
-<div class="icon">🧭</div>
-
-<h3>The Mentor</h3>
-
-<p>Guidance, experience & good advice.</p>
-
-</div>
+        </div>
 
 
+        <div class="profile-card">
 
-<div class="card" onclick="showPopup(
-'The Enthusiast ⚡',
-'Why enjoy something normally when you can enjoy it with 200% energy?'
-)">
+            <div class="key">CURRENT STATUS</div>
 
-<div class="icon">⚡</div>
+            <div class="value">Doing Great™</div>
 
-<h3>The Enthusiast</h3>
-
-<p>Energy level: Questionable.</p>
-
-</div>
+        </div>
 
 
+        <div class="profile-card">
 
-<div class="card" onclick="showPopup(
-'The Fun Department 😂',
-'Normal conversations? Not really his thing. Somehow there is always a funny version.'
-)">
+            <div class="key">ENERGY</div>
 
-<div class="icon">😂</div>
+            <div class="value">Suspiciously High</div>
 
-<h3>The Fun Department</h3>
-
-<p>Seriousness is optional.</p>
-
-</div>
+        </div>
 
 
+        <div class="profile-card">
 
-<div class="card" onclick="showPopup(
-'The Well-Wisher 🤝',
-'Someone who genuinely wants good things for the people around him.'
-)">
+            <div class="key">HUMOUR</div>
 
-<div class="icon">🤝</div>
+            <div class="value">Always Available</div>
 
-<h3>The Well-Wisher</h3>
-
-<p>Good intentions. Always.</p>
-
-</div>
+        </div>
 
 
-</div>
+        <div class="profile-card full">
+
+            <div class="key">KNOWN FOR</div>
+
+            <div class="value">
+                Good advice · Good energy ·
+                Enjoying the moment · Randomly funny conversations
+            </div>
+
+        </div>
+
+    </div>
 
 </div>
 
 </section>
 
 
+<!-- INTERACTIVE -->
 
-<!-- ================= POPUP ================= -->
-
-<div class="popup" id="popup">
-
-<div class="popup-box">
-
-<h2 id="popupTitle"></h2>
-
-<p id="popupText"></p>
-
-<button class="close" onclick="closePopup()">
-Okay 😂
-</button>
-
-</div>
-
-</div>
-
-
-
-<!-- ================= ENERGY ================= -->
-
-<section class="energy">
+<section class="interactive">
 
 <div class="container">
 
-<h2>Scientific Analysis 🧪</h2>
+    <div class="section-label">
+        02 / SYSTEM DIAGNOSTICS
+    </div>
 
-<p class="subtitle">
-After conducting absolutely zero scientific research...
-</p>
+    <h2 class="section-title">
+        Let's run a few tests.
+    </h2>
+
+    <div class="interactive-box">
+
+        <div class="command">
+
+            <div>&gt; check <span>enthusiasm</span></div>
+
+            <div>&gt; check <span>humour</span></div>
+
+            <div>&gt; check <span>advice</span></div>
+
+            <div>&gt; check <span>ability_to_enjoy_life</span></div>
+
+            <br>
+
+            <button class="enter" onclick="runTest()">
+                RUN DIAGNOSTICS
+            </button>
+
+        </div>
 
 
-<h3>SHUBHAM ENERGY LEVEL</h3>
+        <div class="console">
 
-<div class="meter">
+            <div class="console-line">
+                system@birthday:~$ ./diagnostics
+            </div>
 
-<div class="meter-fill"></div>
+            <div class="console-line">
+                ----------------------------
+            </div>
 
-</div>
+            <div id="output">
+                Waiting for input...
+            </div>
 
-<small>98% — remaining 2% probably loading...</small>
+        </div>
 
-
-<br><br><br>
-
-
-<h3>ABILITY TO MAKE NORMAL MOMENTS FUN</h3>
-
-<div class="meter">
-
-<div class="meter-fill"></div>
-
-</div>
-
-<small>100% — unfortunately proven.</small>
+    </div>
 
 </div>
 
 </section>
 
 
+<!-- MOMENTS -->
 
-<!-- ================= BLAME ================= -->
-
-<section class="blame">
+<section class="moments">
 
 <div class="container">
 
-<h2>Things We Can Blame You For 😂</h2>
+    <div class="section-label">
+        03 / OBSERVATIONS
+    </div>
 
-<p class="subtitle">
-Completely unofficial allegations.
-</p>
-
-
-<div class="blame-grid">
-
-
-<div class="blame-item">
-
-<span>😂</span>
-
-<p>
-Turning random conversations into memories.
-</p>
-
-</div>
+    <h2 class="section-title">
+        Things that happen.
+    </h2>
 
 
-<div class="blame-item">
+    <div class="moment-grid">
 
-<span>⚡</span>
+        <div class="moment"
+             onclick="openPopup(
+             'Observation #01',
+             'A normal conversation has a statistically questionable chance of remaining normal.'
+             )">
 
-<p>
-Having unnecessarily high enthusiasm.
-</p>
+            <div class="moment-number">01</div>
 
-</div>
+            <div class="moment-text">
+                Normal conversation
+                <br>
+                ↓
+                <br>
+                Somehow funny.
+            </div>
 
-
-<div class="blame-item">
-
-<span>📸</span>
-
-<p>
-Creating moments that eventually become stories.
-</p>
-
-</div>
-
-
-<div class="blame-item">
-
-<span>😎</span>
-
-<p>
-Making "let's just enjoy the moment"
-look like a legitimate philosophy.
-</p>
-
-</div>
+        </div>
 
 
-</div>
+        <div class="moment"
+             onclick="openPopup(
+             'Observation #02',
+             'There is always a reason to enjoy the moment. Even when nobody planned to.'
+             )">
+
+            <div class="moment-number">02</div>
+
+            <div class="moment-text">
+                “Let's just enjoy it.”
+                <br>
+                Somehow becomes the plan.
+            </div>
+
+        </div>
+
+
+        <div class="moment"
+             onclick="openPopup(
+             'Observation #03',
+             'Good advice appears exactly when you need it. Usually somewhere between the jokes.'
+             )">
+
+            <div class="moment-number">03</div>
+
+            <div class="moment-text">
+                Good advice.
+                <br>
+                Unexpected timing.
+            </div>
+
+        </div>
+
+    </div>
 
 </div>
 
 </section>
 
 
+<!-- ARCHIVE -->
 
-<!-- ================= MEMORIES ================= -->
-
-<section class="photos">
+<section class="archive">
 
 <div class="container">
 
-<h2>The Evidence 📸</h2>
+    <div class="section-label">
+        04 / ARCHIVE
+    </div>
 
-<p class="subtitle">
+    <h2 class="section-title">
+        Memories.
+    </h2>
 
-Proof that some of those moments actually happened.
+    <div class="archive-grid">
 
-</p>
+        <div class="photo">
+            PHOTO_01
+        </div>
 
+        <div class="photo">
+            PHOTO_02
+        </div>
 
-<div class="photo-grid">
+        <div class="photo">
+            PHOTO_03
+        </div>
 
-<div class="photo">
-📸 Memory 01
-</div>
+        <div class="photo">
+            PHOTO_04
+        </div>
 
-<div class="photo">
-📸 Memory 02
-</div>
-
-<div class="photo">
-📸 Memory 03
-</div>
-
-<div class="photo">
-📸 Memory 04
-</div>
-
-</div>
+    </div>
 
 </div>
 
 </section>
 
 
+<!-- MESSAGE -->
 
-<!-- ================= GIFT ================= -->
-
-<section class="surprise">
+<section class="message">
 
 <div class="container">
 
-<h2>There's Something Here... 👀</h2>
+    <div class="section-label">
+        05 / ONE SERIOUS THING
+    </div>
 
-<p class="subtitle">
-I wouldn't click it if I were you.
-</p>
+    <div class="message-box">
 
+        <p>
+            Some people have this amazing way of making
+            even ordinary moments fun and memorable.
+            <br><br>
 
-<div class="gift" onclick="openGift()">
+            You're one of those people.
+            <br><br>
 
-🎁
+            Thanks for the guidance, the laughs,
+            the random conversations and all the
+            good moments in between.
+            <br><br>
 
-</div>
+            <strong>
+                Genuinely wishing you a great year ahead.
+            </strong>
+        </p>
 
-
-<div class="surprise-message" id="surpriseMessage">
-
-<h2>GOTCHA 😂</h2>
-
-<p>
-
-Obviously there had to be one final surprise.
-
-<br><br>
-
-Happy Birthday, Shubham! 🎂
-
-<br><br>
-
-Keep the enthusiasm.
-Keep the madness.
-Keep enjoying every moment.
-
-❤️
-
-</p>
-
-</div>
+    </div>
 
 </div>
 
 </section>
 
 
-
-<!-- ================= FINAL ================= -->
+<!-- FINAL -->
 
 <section class="final">
 
 <div class="container">
 
-<h2>
-Happy Birthday, Shubham! 🎂
-</h2>
+    <div class="section-label">
+        SYSTEM MESSAGE
+    </div>
 
-<p>
+    <h2>
+        HAPPY<br>
+        BIRTHDAY.
+    </h2>
 
-Some people make moments memorable
-without even trying.
-
-<br><br>
-
-Thanks for being one of them.
-
-<br><br>
-
-<strong>
-Have an amazing year ahead. ❤️
-</strong>
-
-<br><br>
-
-And please...
-
-<br>
-
-don't become too serious this year. 😂
-
-</p>
+    <p>
+        shubham.exe continues to run successfully.
+        <br>
+        No updates required. 😂
+    </p>
 
 </div>
 
 </section>
 
 
+<footer>
+    made with respect + questionable amounts of coding
+</footer>
+
+
+<!-- POPUP -->
+
+<div class="popup" id="popup">
+
+    <div class="popup-box">
+
+        <h3 id="popupTitle"></h3>
+
+        <p id="popupText"></p>
+
+        <button class="close" onclick="closePopup()">
+            CLOSE
+        </button>
+
+    </div>
+
+</div>
+
 
 <script>
 
+function goTo(id) {
 
-function scrollToGame(){
-
-document
-.getElementById("game")
-.scrollIntoView({
-behavior:"smooth"
-});
+    document.getElementById(id).scrollIntoView({
+        behavior: "smooth"
+    });
 
 }
 
 
+function runTest() {
 
-function showPopup(title,text){
+    const output = document.getElementById("output");
 
-document
-.getElementById("popupTitle")
-.innerText=title;
-
-document
-.getElementById("popupText")
-.innerText=text;
-
-document
-.getElementById("popup")
-.style.display="flex";
+    output.innerHTML = `
+        <strong>Running...</strong><br><br>
+        Enthusiasm ........ 100%<br>
+        Humour ............ ACTIVE<br>
+        Good advice ....... DETECTED<br>
+        Enjoying life ..... MAXIMUM<br><br>
+        <strong>Result: System functioning perfectly.</strong>
+    `;
 
 }
 
 
+function openPopup(title, text) {
 
-function closePopup(){
+    document.getElementById("popupTitle").innerText = title;
 
-document
-.getElementById("popup")
-.style.display="none";
+    document.getElementById("popupText").innerText = text;
 
-}
-
-
-
-function openGift(){
-
-document
-.getElementById("surpriseMessage")
-.style.display="block";
-
-document
-.querySelector(".gift")
-.style.display="none";
+    document.getElementById("popup").style.display = "flex";
 
 }
 
+
+function closePopup() {
+
+    document.getElementById("popup").style.display = "none";
+
+}
 
 
 </script>
 
-
 </body>
-
 </html>
